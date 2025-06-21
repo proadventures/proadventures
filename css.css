@@ -1,0 +1,181 @@
+.jumbotron {
+    height: 600px;
+   background-color:  rgb(4, 67, 42);
+    overflow: hidden;
+}
+
+/* TEKS DI TENGAH, DI ATAS KOLOM */
+.jumbotron-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; /* Penting agar di atas row/col */
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  
+}
+.wave{
+   position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 15; /* Lebih tinggi dari teks dan kolom */
+  pointer-events: none; /* Biar tidak menghalangi klik */
+   
+}
+.judul{
+    font-size: clamp(3rem, 8vw, 12rem);
+  line-height: 1.2;
+  color: rgb(21, 82, 41); /* hijau gelap */
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  word-wrap: break-word;
+  text-shadow:
+    -1px -1px 0 #fff,               /* highlight atas kiri */
+    2px 2px 2px #000,               /* shadow utama */
+    0px 8px 15px rgba(0, 0, 0, 0.7);/* bayangan jatuh di bawah */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.cliping1{
+    height: 600px;
+   background-image: 
+        linear-gradient(0deg, rgba(247, 247, 247, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%),
+        url('img/rafting.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(70, 132, 132);
+    border-right: 3px solid white;
+   
+    /* clip-path: polygon(0% 0%, 75% 0%, 44% 49%, 75% 100%, 0% 100%); */
+}
+.cliping2{
+    height: 600px;
+    background-image: linear-gradient(0deg, rgba(247, 247, 247, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%), url('img/pinbol.jpeg');
+    background-size: cover;
+    background-position: center;
+    border-right: 3px solid white;
+    
+}
+.cliping3{
+    height: 600px;
+     background-image:  linear-gradient(0deg, rgba(247, 247, 247, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%), url('img/mobil.jpg');
+    background-size: cover;
+    background-position: center;
+    border-right: 3px solid white;
+   
+}
+.cliping4{
+    height: 600px;
+    background-image:  linear-gradient(0deg, rgba(247, 247, 247, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%), url('img/hompimpa.jpg');
+    background-size: cover;
+    background-position: center;
+   
+}
+.adaapaaja{
+    margin-top: 20px;
+    text-align: center;
+}
+.garis-dengan-teks {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  margin: 20px 0;
+ 
+  
+}
+
+.garis-dengan-teks::before,
+.garis-dengan-teks::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: rgb(13, 86, 13); /* warna garis */
+  margin: 0 10px;
+}
+.gambar-kartu{
+    height: 300px;
+    
+}
+.gambarbawah{
+    height: 300px;
+}
+.card-text{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+.card {
+ box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25); /* Efek timbul langsung terlihat */
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card-body h5 {
+  font-size: 1.6rem;
+  background: linear-gradient(to right, #2e7d32, #81c784);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  margin-bottom: 1rem;
+}
+
+.card-body p.card-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeInUp 1s ease;
+}
+
+.kontak-index {
+  border-top: 2px solid brown;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.kontak-teks {
+  font-size: clamp(1rem, 2.5vw, 1.25rem); /* Responsive */
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.kontak-link {
+  color: black;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.kontak-icon {
+  font-size: 1.25rem;
+  vertical-align: middle;
+}
+
+
+/* Optional animasi ringan */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
